@@ -60,8 +60,6 @@ export default{
        
             const imobi = await prisma.imobi.findMany()
 
-           
-
             return res.json(imobi)
         } catch (error) {
             return res.json({message: error.message})

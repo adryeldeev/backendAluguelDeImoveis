@@ -17,7 +17,7 @@ router.get('/listusers', auth, UserController.findAllUser)
 router.post('/session', SessionController.createSeassion)
 router.post('/createimobi',upload.single("thumb"), ImobiController.createImobi)
 router.get('/listimobi', ImobiController.findAllImobi)
-router.get('/createmessage', MessageController.createMessage)
+router.post('/createmessage', MessageController.createMessage)
 router.get('/listimobi/:slug', ImobiController.findImobi)
 router.get('/listmessage/:id', MessageController.findMessage)
 
