@@ -9,6 +9,7 @@
   },
   "scripts": {
     "vercel-build":"npx prisma migrate deploy",
+    "postinstall": "prisma generate",
     "start":"node src/app.js",
     "dev": "nodemon src/app.js"
   },
