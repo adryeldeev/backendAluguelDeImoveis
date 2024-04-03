@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -38,6 +35,7 @@ model Imobi {
   created_at DateTime? @default(now())
   author     User      @relation(fields: [userId], references: [id])
 
+  @@index([userId], map: "imoveis_userId_fkey")
   @@map("imoveis")
 }
 
@@ -49,5 +47,6 @@ model Messagens {
   userId          Int
   author          User   @relation(fields: [userId], references: [id])
 
+  @@index([userId], map: "messagens_userId_fkey")
   @@map("messagens")
 }
