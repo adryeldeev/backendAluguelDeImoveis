@@ -8,7 +8,7 @@
     "node": "20.x"
   },
   "scripts": {
-    "vercel-build": "npx prisma migrate deploy && next build",
+    "vercel-build": "npx prisma migrate deploy",
     "postinstall": "prisma generate",
     "start": "node src/app.js",
     "dev": "nodemon src/app.js"
