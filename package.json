@@ -2,15 +2,23 @@
   "name": "backendimoveis",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "type": "module",
   "engines": {
     "node": "20.x"
   },
   "scripts": {
     "vercel-build": "npx prisma migrate deploy",
+    "postinstall": "npx prisma generate",  
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/app.js",
+    "prisma:format": "npx prisma format && npx prisma db push",
+    "prisma:generate": "npx prisma generate",
+    "prisma:migrate:init": "npx prisma migrate dev --name init",
+    "prisma:migrate": "npx prisma migrate dev",
+    "prisma:reset": "npx prisma migrate reset",
+    "prisma:seed": "npx prisma db seed"
+
   },
   "keywords": [],
   "author": "",
