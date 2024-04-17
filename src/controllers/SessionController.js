@@ -1,5 +1,5 @@
 import {PrismaClient } from '@prisma/client'
-import { compare, hash } from 'bcrypt';
+import { compare } from 'bcrypt';
 import jwt from 'jsonwebtoken'
 const prisma = new PrismaClient()
 export default{

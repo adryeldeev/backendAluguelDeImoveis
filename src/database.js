@@ -1,6 +1,6 @@
-import { createConnection } from "mysql2";
 
-const connection = createConnection({
+import mysql from 'mysql2'
+const db =  mysql.createConnection({
     host: "viaduct.proxy.rlwy.net",
     user: "root",
     port: 25760,
@@ -8,7 +8,7 @@ const connection = createConnection({
     database: "railway"
 });
 
-connection.connect(err => {
+db.connect(err => {
     if (err) {
         console.error('Erro ao conectar ao banco de dados:', err.stack);
         return;
@@ -16,7 +16,7 @@ connection.connect(err => {
 
     console.log('Conexão bem-sucedida ao banco de dados.');
 
-    connection.query(`SHOW TABLES`, (err, result, fields) => {
+    db.query(`SHOW TABLES`, (err, result, fields) => {
         if (err) {
             console.error('Erro ao executar consulta:', err.stack);
             return;
@@ -27,8 +27,8 @@ connection.connect(err => {
             console.log(row.Tables_in_railway);
         });
 
-        connection.end(); // Fechar a conexão após a consulta
+        db.end(); // Fechar a conexão após a consulta
     });
 });
 
-export default connection;
+export default db;
