@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import UserController from './controllers/UserController';
+
 import SessionController from './controllers/SessionController';
 import auth from './middlewares/auth';
 import ImobiController from './controllers/ImobiController';
@@ -7,6 +7,7 @@ import ImobiController from './controllers/ImobiController';
 import multer from 'multer';
 import uploadConfig from './middlewares/upload'
 import MessageController from './controllers/MessageController';
+import UserController from './controllers/UserController';
 
 const upload = multer(uploadConfig)
 

@@ -4,9 +4,8 @@ generator client {
 }
 
 datasource db {
-  provider     = "mysql"
-  url          = "mysql://root:RuXnKeyytJqWvgyJCPOFsWqcShahoHyZ@viaduct.proxy.rlwy.net:25760/railway"
-  relationMode = "prisma"
+  provider = "mysql"
+  url      = env("DATABASE_URL")
 }
 
 model User {
