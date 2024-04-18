@@ -6,19 +6,18 @@ const pool = createPool({
     port:25760,
     password:"RuXnKeyytJqWvgyJCPOFsWqcShahoHyZ",
     database:"railway",
-    connectionLimit:10
     
 })
 
-pool.query(`SHOW TABLES`, (err, result, fields) => {
-    if (err) {
-        return console.log(err);
+pool.getConnection((err, connection)=>{
+    if(err){
+        console.log( 'Erro ao  conectar ao banco de dados'+ err.stack)
+        return err
     }
-    console.log("Tabelas no banco de dados:");
-    result.forEach(row => {
-        console.log(row.Tables_in_railway);
-    });
-});
+    console.log('Conexão bem sucedida, ID da conexão: ' + connection.threadId)
+    connection.release()
+})
+
 
 
 
