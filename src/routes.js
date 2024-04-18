@@ -1,13 +1,13 @@
 import {Router} from 'express';
 
-import SessionController from './controllers/SessionController.js';
+import SessionController from './controllers/SessionController';
 import auth from './middlewares/auth';
-import ImobiController from './controllers/ImobiController.js';
+import ImobiController from './controllers/ImobiController';
 
 import multer from 'multer';
 import uploadConfig from './middlewares/upload'
-import MessageController from './controllers/MessageController.js';
-import UserController from './controllers/UserController.js';
+import MessageController from './controllers/MessageController';
+import UserController from './controllers/UserController';
 
 const upload = multer(uploadConfig)
 
