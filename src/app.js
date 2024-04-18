@@ -16,7 +16,9 @@ app.use((req,res,next)=>{
 })
 
 app.use(router)
-app.listen(8000,()=>{
-    console.log('Server is running 8000')
+const  port = process.env.PORT || 8081
+
+app.listen(port,()=>{
+    console.log(`Server port ${port}`)
 })
 
