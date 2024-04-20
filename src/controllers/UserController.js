@@ -1,4 +1,4 @@
-const { PrismaClient } = require('@prisma/client');
+const { PrismaClient } = require('../../prisma/generated/client/edge');
 const { hash } = require('bcrypt');
 
 
