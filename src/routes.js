@@ -1,13 +1,17 @@
 import {Router} from 'express';
+const  { Router } = require('express')
+const SessionController = require('./controllers/SessionController')
 
-import SessionController from './controllers/SessionController';
-import auth from './middlewares/auth';
-import ImobiController from './controllers/ImobiController';
+const auth = require('./middlewares/auth');
 
-import multer from 'multer';
-import uploadConfig from './middlewares/upload'
-import MessageController from './controllers/MessageController';
-import UserController from './controllers/UserController';
+const ImobiController = require('./controllers/ImobiController')
+
+const multer = require('multer')
+
+const uploadConfig = require('./middlewares/upload')
+
+const MessageController = require('./controllers/MessageController')
+const UserController = require('./controllers/UserController')
 
 const upload = multer(uploadConfig)
 

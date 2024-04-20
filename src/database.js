@@ -1,4 +1,4 @@
-import { createPool } from "mysql2";
+const {createPool} = require('mysql2')
 
 const pool = createPool({
     host:"viaduct.proxy.rlwy.net",

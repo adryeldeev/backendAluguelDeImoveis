@@ -1,6 +1,7 @@
-import {PrismaClient } from '@prisma/client'
-import { compare } from 'bcrypt';
-import jwt from 'jsonwebtoken'
+const { PrismaClient } = require('@prisma/client');
+const { compare } = require('bcrypt');
+
+const jwt = require('jsonwebtoken')
 const prisma = new PrismaClient()
 export default{
     async createSeassion(req,res){

@@ -1,8 +1,8 @@
-import express from 'express'
-import { router } from './routes.js'
-import cors from 'cors'
-import path from 'path'
-const app = express()
+const express = require('express');
+const { router } = require('./routes.js');
+const cors = require('cors');
+const path = require('path');
+const app = express();
 
 app.use('/uploads', express.static(path.resolve(__dirname,'../', 'uploads')))
 app.use(express.json())
