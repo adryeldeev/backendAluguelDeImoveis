@@ -10,7 +10,7 @@
     "vercel-build": "npx prisma migrate deploy && next build",
     "postinstall": "npx prisma generate",
   
-    "start": "npx prisma generate && nodemon src/app.js",
+    "start": "nodemon src/app.js",
     "dev": "nodemon src/app.js"
   },
   "keywords": [],

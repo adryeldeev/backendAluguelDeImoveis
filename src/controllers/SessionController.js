@@ -1,4 +1,4 @@
-const { PrismaClient } = require('../../prisma/generated/client/edge');
+const { PrismaClient } = require('@prisma/client');
 const { compare } = require('bcrypt');
 
 const jwt = require('jsonwebtoken')
