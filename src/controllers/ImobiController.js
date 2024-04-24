@@ -1,4 +1,4 @@
-const { PrismaClient } = require('../../prisma/generated/client/edge');
+const { PrismaClient } = require('./prisma/node_modules/.prisma/client');
 
 const prisma = new PrismaClient()
 export default{
