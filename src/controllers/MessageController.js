@@ -1,10 +1,10 @@
-const { PrismaClient } = require('./prisma/node_modules/.prisma/client');
+const { PrismaClient } = require('../../prisma/node_modules/.prisma/client');
 
 const prisma  = new PrismaClient()
 
 
 
-export default {
+ module.exports= {
     async createMessage(req,res){
         const {client_name, client_email, client_mensagem, userId} = req.body;
 

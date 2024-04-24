@@ -1,11 +1,12 @@
-import multer from "multer";
-import crypto from 'crypto'
-import path from "path";
+const multer = require('multer')
+const crypto = require('crypto')
+const path = require('path')
+
 
 const tempFolder = path.resolve(__dirname,"../", "../", "uploads")
 const tempUpload = path.resolve(tempFolder,"uploads");
 
-export default {
+module.exports = {
     directory:tempFolder,
     uploadFolder:tempUpload,
     storage:multer.diskStorage({

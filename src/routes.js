@@ -28,4 +28,4 @@ router.get('/listmessage/:id', MessageController.findMessage)
 
 
 
-export { router }
+module.exports={ router }

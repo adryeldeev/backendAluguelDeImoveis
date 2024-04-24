@@ -1,10 +1,10 @@
-const { PrismaClient } = require('./prisma/node_modules/.prisma/client');
+const { PrismaClient } = require('../../prisma/node_modules/.prisma/client');
 
 const { compare } = require('bcrypt');
 
 const jwt = require('jsonwebtoken')
 const prisma = new PrismaClient()
-export default{
+module.exports={
     async createSeassion(req,res){
         try {
             const {email, password} = req.body;

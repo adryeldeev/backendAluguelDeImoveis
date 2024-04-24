@@ -1,6 +1,6 @@
-import jwt from 'jsonwebtoken'
+const jwt = require('jsonwebtoken')
 
-export default function auth(req, res, next){
+module.exports= function auth(req, res, next){
 const { authorization} = req.headers;
 if(!authorization){
     return res.json({message: "Não autorizado"}, 401)
