@@ -1,17 +1,17 @@
 
 const  { Router } = require('express')
-const SessionController = require('./controllers/SessionController')
+const SessionController = require('./controllers/SessionController.js')
 
-const auth = require('./middlewares/auth');
+const auth = require('./middlewares/auth.js');
 
-const ImobiController = require('./controllers/ImobiController')
+const ImobiController = require('./controllers/ImobiController.js')
 
 const multer = require('multer')
 
-const uploadConfig = require('./middlewares/upload')
+const uploadConfig = require('./middlewares/upload.js')
 
-const MessageController = require('./controllers/MessageController')
-const UserController = require('./controllers/UserController')
+const MessageController = require('./controllers/MessageController.js')
+const UserController = require('./controllers/UserController.js')
 
 const upload = multer(uploadConfig)
 

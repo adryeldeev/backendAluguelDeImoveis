@@ -10,8 +10,14 @@
   "scripts": {
     "vercel-build": "npx prisma migrate deploy",
     "postinstall": "npx prisma generate",
-    "start": "nodemon app.js",
-    "dev": "nodemon app.js"
+    "start": "nodemon src/app.js",
+    "dev": "nodemon src/app.js",
+    "prisma:format": "npx prisma format && npx prisma db push",
+    "prisma:generate": "npx prisma generate",
+    "prisma:migrate:init": "npx prisma migrate dev --name init",
+    "prisma:migrate": "npx prisma migrate dev",
+    "prisma:reset": "npx prisma migrate reset",
+    "prisma:seed": "npx prisma db seed"
   },
   "keywords": [],
   "author": "",
