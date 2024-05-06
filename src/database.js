@@ -4,8 +4,8 @@ const pool = createPool({
     host:"viaduct.proxy.rlwy.net",
     user:"root",
     port:25760,
-    password:"RuXnKeyytJqWvgyJCPOFsWqcShahoHyZ",
-    database:"railway",
+    password:"RuXnKeyytJqWvgyJCPOFsWqcShahoHyZ"
+  
     
 })
 
