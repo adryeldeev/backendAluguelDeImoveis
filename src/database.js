@@ -3,7 +3,7 @@ const {createPool} = require('mysql2')
 const pool = createPool({
     host: "viaduct.proxy.rlwy.net",
     user: "root",
-    port: 2567,
+    port: 25670,
     password: "RuXnKeyytJqWvgyJCPOFsWqcShahoHyZ"
 });
 
