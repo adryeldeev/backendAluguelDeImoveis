@@ -1,8 +1,7 @@
-const { PrismaClient } = require("../../prisma/prisma/node_modules/.prisma/client/edge.js");
+const prisma = require('../prismaInitiation.js');
 const { hash } = require('bcrypt');
 
 
-const prisma = new PrismaClient()
 module.exports= {
     async createUser(req, res){
         const {name, email, password } = req.body;

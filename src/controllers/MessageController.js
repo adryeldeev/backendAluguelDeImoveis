@@ -1,6 +1,6 @@
-const { PrismaClient } = require("../../prisma/prisma/node_modules/.prisma/client/edge.js");
+const prisma = require('../prismaInitiation.js');
 
-const prisma  = new PrismaClient()
+
  module.exports= {
     async createMessage(req,res){
         const {client_name, client_email, client_mensagem, userId} = req.body;
