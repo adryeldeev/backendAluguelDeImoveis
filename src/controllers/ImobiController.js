@@ -1,5 +1,6 @@
-const prisma = require('../prismaInitiation.js');
+const {PrismaClient} = require('@prisma/client')
 
+const prisma = new PrismaClient()
 
 module.exports={
     async createImobi(req,res){

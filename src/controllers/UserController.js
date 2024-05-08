@@ -1,7 +1,7 @@
-const prisma = require('../prismaInitiation.js');
+const {PrismaClient} = require('@prisma/client')
 const { hash } = require('bcrypt');
 
-
+const prisma = new PrismaClient()
 module.exports= {
     async createUser(req, res){
         const {name, email, password } = req.body;
