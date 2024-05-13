@@ -1,10 +1,10 @@
 const {createPool} = require('mysql2')
 
 const pool = createPool({
-    host: "viaduct.proxy.rlwy.net",
+    host: "monorail.proxy.rlwy.net",
     user: "root",
-    port: 25670,
-    password: "RuXnKeyytJqWvgyJCPOFsWqcShahoHyZ"
+    port: 34285,
+    password: "bUIzfFzGOjuFkGwkLKTiOubXLLaAbKNF"
 });
 
 pool.getConnection((err, connection)=>{
