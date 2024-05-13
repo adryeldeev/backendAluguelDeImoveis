@@ -16,7 +16,12 @@ const UserController = require('./controllers/UserController.js')
 const upload = multer(uploadConfig)
 
 const router = Router();
-
+router.get('/',(req,res)=>{
+    res.json({
+        status:true,
+        message:"Api working!"
+    })
+})
 router.post('/createUsers', UserController.createUser)
 router.get('/listusers', auth, UserController.findAllUser)
 router.post('/session', SessionController.createSeassion)
