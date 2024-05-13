@@ -4,7 +4,7 @@ const pool = createPool({
     host: "monorail.proxy.rlwy.net",
     user: "root",
     port: 34285,
-    password: "bUIzfFzGOjuFkGwkLKTiOubXLLaAbKNF"
+   
 });
 
 pool.getConnection((err, connection)=>{
