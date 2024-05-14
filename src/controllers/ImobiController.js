@@ -91,7 +91,7 @@ export default {
     try {
       const { name, email, messagem, userId } = request.body;
 
-      const message = await prisma.message.create({
+      const message = await prisma.messagens.create({
         data: {
           name, 
           email, 

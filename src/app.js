@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 });
 
 app.use(router);
-
+const port = process.env.PORT || 8000
 app.listen(8000, () => {
-  console.log("Server is runing 8000");
+  console.log(`Server is runing ${port}`);
 })

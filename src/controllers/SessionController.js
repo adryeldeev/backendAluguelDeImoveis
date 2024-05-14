@@ -12,7 +12,7 @@ export default {
       if (!user) {
         return response.json({ 
           error: false,
-          message: "usuário ou senha incorretos EMAIL" 
+          message: "usuário ou senha incorretos" 
         })
       }
 
@@ -21,7 +21,7 @@ export default {
       if (!checkPassword) {
         return response.json({ 
           error: false,
-          message: "usuário ou senha incorretos SENHA" 
+          message: "usuário ou senha incorretos" 
         })
       }
 
