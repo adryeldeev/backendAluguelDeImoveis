@@ -26,9 +26,9 @@ app.use((req, res, next) => {
 
 
 // Utilização do roteador
-app.use(router);
 
 const port = process.env.PORT || 8000;
+app.use(router);
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
