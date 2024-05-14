@@ -2,8 +2,7 @@
   "name": "backendimoveis",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.js",
-  "type": "commonjs",
+  "main": "index.js",
   "engines": {
     "node": "20.x"
   },

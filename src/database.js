@@ -1,4 +1,4 @@
-const {createPool} = require('mysql2')
+import { createPool } from "mysql2";
 
 const pool = createPool({
     host: "monorail.proxy.rlwy.net",

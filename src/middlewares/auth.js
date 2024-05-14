@@ -1,20 +1,19 @@
-const jwt = require('jsonwebtoken')
+import jwt from "jsonwebtoken";
 
-module.exports= function auth(req, res, next){
-const { authorization} = req.headers;
-if(!authorization){
-    return res.json({message: "Não autorizado"}, 401)
+export default function auth(request, response, next) {
+  const { authorization } = request.headers;
 
-}
-const token = authorization.replace('Bearer','').trim();
-try {
-    const data = jwt.verify(token, '698dc19d489c4e4db73e28a713eab07b')
-    const {id} = data;
-    req.userId = id;
+  if (!authorization) {
+    return response.json({ message: "Não autorizado" }, 401)
+  }
 
-    return next()
-
-} catch (error) {
-    return res.json({message: "Não autorizado"}, 401)
-}
+  const token = authorization.replace('Bearer', '').trim();
+  try {
+    const data = jwt.verify(token, '698dc19d489c4e4db73e28a713eab07b');
+    const { id } = data;
+    request.userId = id;
+    return next();
+  } catch {
+    return response.json({ message: "Não autorizado" }, 401)
+  }
 }
