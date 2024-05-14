@@ -22,7 +22,7 @@ router.get('/',(req,res)=>{
         message:"Api working!"
     })
 })
-router.post('/createUsers', UserController.createUser)
+router.post('/createusers', UserController.createUser)
 router.get('/listusers', auth, UserController.findAllUser)
 router.post('/session', SessionController.createSeassion)
 router.post('/createimobi',upload.single("thumb"), ImobiController.createImobi)
