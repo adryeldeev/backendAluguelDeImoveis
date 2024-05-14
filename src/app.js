@@ -21,14 +21,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use((req, res, next) => {
-    // Verifica se a requisição é para o diretório raiz
-    if (req.url === '/') {
-        // Redireciona para a rota principal desejada
-        return res.redirect('/');
-    }
-    next();
-});
+
 
 
 

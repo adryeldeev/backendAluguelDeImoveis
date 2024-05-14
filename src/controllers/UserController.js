@@ -42,5 +42,20 @@ try {
 } catch (error) {
     return res.json({message: error.message})
 }
-    }
+    },
+
+    async findUser(request, response) {
+        try {
+          const { userId } = request.params;
+    
+          const user = await prisma.user.findUnique({
+            where: { id : Number(userId) }
+          });
+          delete user.password;
+          return response.json(user);
+    
+        } catch (error) {
+          return response.json({ message: error.message })
+        }
+      }
 }
