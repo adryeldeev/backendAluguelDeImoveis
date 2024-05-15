@@ -1,5 +1,4 @@
-
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "../../prisma/prisma/node_modules/.prisma/client";
 const prisma = new PrismaClient();
 
 export default {

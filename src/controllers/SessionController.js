@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "../../prisma/prisma/node_modules/.prisma/client";
 import { compare } from "bcrypt";
 import jwt from "jsonwebtoken";
 const prisma = new PrismaClient();
