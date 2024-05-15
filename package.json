@@ -5,8 +5,6 @@
   "main": "index.js",
 
   "scripts": {
-    "vercel-build": "npx prisma migrate deploy && prisma generate",
-
    
     "start": "nodemon src/app.js",
     "dev": "nodemon src/app.js"
